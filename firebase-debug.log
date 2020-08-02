@@ -1,0 +1,80 @@
+[debug] [2020-04-11T20:39:04.286Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T20:39:04.288Z] Command:       /usr/local/bin/node /Users/andrewnaysmith/.npm-packages/bin/firebase deploy
+[debug] [2020-04-11T20:39:04.288Z] CLI Version:   8.0.1
+[debug] [2020-04-11T20:39:04.288Z] Platform:      darwin
+[debug] [2020-04-11T20:39:04.288Z] Node Version:  v12.16.1
+[debug] [2020-04-11T20:39:04.293Z] Time:          Sun Apr 12 2020 08:39:04 GMT+1200 (New Zealand Standard Time)
+[debug] [2020-04-11T20:39:04.293Z] ----------------------------------------------------------------------
+[debug] [2020-04-11T20:39:04.293Z] 
+[debug] [2020-04-11T20:39:04.308Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-11T20:39:04.308Z] > authorizing via signed-in user
+[debug] [2020-04-11T20:39:04.308Z] [iam] checking project expopushtest-21a17 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-04-11T20:39:04.310Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-11T20:39:04.310Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-11T20:39:04.751Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:04 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-11T20:39:04.787Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/expopushtest-21a17:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-04-11T20:39:05.449Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:05 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=204","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'expopushtest-21a17'...
+[info] 
+[info] i  deploying functions
+[debug] [2020-04-11T20:39:07.095Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-04-11T20:39:07.097Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/expopushtest-21a17/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-04-11T20:39:07.097Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/expopushtest-21a17/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-04-11T20:39:08.868Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-11T20:39:08.948Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2020-04-11T20:39:08.949Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/expopushtest-21a17/adminSdkConfig  
+ 
+[debug] [2020-04-11T20:39:09.674Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-04-11T20:39:09.677Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/expopushtest-21a17/configs  
+ 
+[debug] [2020-04-11T20:39:10.565Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (28.02 KB) for uploading
+[debug] [2020-04-11T20:39:10.764Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/expopushtest-21a17/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-04-11T20:39:12.380Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-11T20:39:12.381Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-5dfdc7b8-7987-4aa4-aeec-6afda67f7142/bbe96d50-ec00-44f2-99cb-d059878b7077.zip?GoogleAccessId=service-440264739101@gcf-admin-robot.iam.gserviceaccount.com&Expires=1586639352&Signature=Wdv%2BjWnSsHRsBbqWl4t%2FkS08Rc0hRgw%2FF9FdyXPJq12rtBSpNa8wDoYJlkFpZxD81bektH0TgRsnOTABnLIe2UaIxyaCVFWATQh1dSaq0%2B%2FXw9EeM0UOP3ndQ%2FRfmgZ8PMEXglv%2F8DKkh0eg2SncN4nDQQlm4YacUpAZ7WcofrcEV2vF33SotxQ%2BbScwKWWjGLo6ohMj37kgWw2qzB1TzeZHNDrA3nI0dPTEHny8xk4UrpRCp7Wlofr9nABOOY8PoKoPWvizDi6eubvfEvY5Wt49aFIut%2Bizcbj27a%2BfpKsAU4Vim9nQoqb9N79FWsdRv6%2BJ0nQrOHFXCQf7LnzYQA%3D%3D  
+ <request body omitted>
+[debug] [2020-04-11T20:39:13.636Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"AEnB2Uq9oRZqNhKNlE1FcpdVaI9lQ41-nvb7mTwhX4y4lP9K92kGmH3Ss5HS3i0_gtBm--MW3uDspmjyXLLQcYM0TbZkiRM3ng","etag":"\"fdcaba1fe9f322bd527c942ecb81cfbc\"","x-goog-generation":"1586637553404247","x-goog-metageneration":"1","x-goog-hash":"crc32c=bZ5Lqg==, md5=/cq6H+nzIr1SfJQuy4HPvA==","x-goog-stored-content-length":"28690","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Sat, 11 Apr 2020 20:39:13 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000"}
+[info] ✔  functions: functions folder uploaded successfully
+[debug] [2020-04-11T20:39:13.638Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/expopushtest-21a17/locations/-/functions  
+ 
+[debug] [2020-04-11T20:39:14.353Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 11 Apr 2020 20:39:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: updating Node.js 8 function sendNotification(us-central1)...
+[debug] [2020-04-11T20:39:14.355Z] Trigger is:  {"eventTrigger":{"resource":"projects/_/instances/expopushtest-21a17/refs/users/{newUser}","eventType":"providers/google.firebase.database/eventTypes/ref.create","service":"firebaseio.com"}}
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	sendNotificationOnUpdate(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
